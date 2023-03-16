@@ -43,7 +43,7 @@ class TableViewController: UIViewController,UITableViewDataSource, UITableViewDe
             navigationItem.hidesSearchBarWhenScrolling = true
             
             //Para Agregar los Apartados en el Indice
-            searchController.searchBar.scopeButtonTitles = [ "S","Lab","C","T"]
+            searchController.searchBar.scopeButtonTitles = [ "Salon","Laboratorio","Coleccion","Tesorería"]
             
             searchController.searchBar.delegate = self
         }
@@ -110,7 +110,7 @@ class TableViewController: UIViewController,UITableViewDataSource, UITableViewDe
     func filterForSearchTextAndScopeButton(searchText: String, scopeButton : String = "All") {
         filteredShapes = shapeList.filter {
             shape in
-            let scopeMatch = ( /*scopeButton == "" || */ shape.Salon.lowercased().contains(scopeButton.lowercased()))
+            let scopeMatch = ( scopeButton == "All" ||  shape.Salon.lowercased().contains(scopeButton.lowercased()))
             if(searchController.searchBar.text != "") {
                 let searchTextMatch = shape.Salon.lowercased().contains(searchText.lowercased())
                 
