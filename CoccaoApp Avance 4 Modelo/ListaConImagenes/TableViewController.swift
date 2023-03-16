@@ -26,9 +26,21 @@ class TableViewController: UIViewController,UITableViewDataSource, UITableViewDe
         //se impriman en la pantalla inicial
         func initList()
         {
-            //Salones
+        
             Lugar(Salon: "Salon 1", Unidad: "A", Uname: "cuadro1", Iname: "neko")
+            Lugar(Salon: "Salon 2", Unidad: "B", Uname: "cuadro1", Iname: "neko")
+            Lugar(Salon: "Salon 3", Unidad: "C", Uname: "cuadro1", Iname: "neko")
+            Lugar(Salon: "Salon 4", Unidad: "D", Uname: "cuadro1", Iname: "neko")
             
+            Lugar(Salon: "Lab 1", Unidad: "A", Uname: "cuadro1", Iname: "neko")
+            Lugar(Salon: "Lab 2", Unidad: "B", Uname: "cuadro1", Iname: "neko")
+            Lugar(Salon: "Lab 3", Unidad: "C", Uname: "cuadro1", Iname: "neko")
+            Lugar(Salon: "Lab 4", Unidad: "D", Uname: "cuadro1", Iname: "neko")
+            
+            Lugar(Salon: "Set 1", Unidad: "A", Uname: "cuadro1", Iname: "neko")
+            Lugar(Salon: "Set 2", Unidad: "B", Uname: "cuadro1", Iname: "neko")
+            Lugar(Salon: "Set 3", Unidad: "C", Uname: "cuadro1", Iname: "neko")
+            Lugar(Salon: "Set 4", Unidad: "D", Uname: "cuadro1", Iname: "neko")
         }
     
         func initSearchController() {
@@ -43,7 +55,7 @@ class TableViewController: UIViewController,UITableViewDataSource, UITableViewDe
             navigationItem.hidesSearchBarWhenScrolling = true
             
             //Para Agregar los Apartados en el Indice
-            searchController.searchBar.scopeButtonTitles = [ "Salon","Laboratorio","Coleccion","Tesorería"]
+            searchController.searchBar.scopeButtonTitles = [ "Salon","Lab","Set"]
             
             searchController.searchBar.delegate = self
         }
